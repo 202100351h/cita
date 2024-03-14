@@ -6,7 +6,14 @@ use Illuminate\Http\Request;
 
 class SpecialtyController extends Controller
 {
-    function index() {
+    
+    public function __constructor()
+    {
+        $this->middleware('auth');
+    }
+    
+    public function index() {
         return view('specialties.index');
     }
+    
 }
