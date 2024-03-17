@@ -15,3 +15,12 @@ Route::get('/especialidades', [App\Http\Controllers\SpecialtyController::class, 
 Route::get('/especialidades/create', [App\Http\Controllers\SpecialtyController::class, 'create']);//Crear especialdiades
 Route::get('/especialidades/{specialty}/edit', [App\Http\Controllers\SpecialtyController::class, 'edit']);//Editar especialdiades
 Route::post('/especialidades', [App\Http\Controllers\SpecialtyController::class, 'sendData']);//enviar especialdiades
+
+Route::put('/especialidades/{specialty}', [App\Http\Controllers\SpecialtyController::class, 'update']);//actualizar especialdiades
+Route::delete('/especialidades/{specialty}', [App\Http\Controllers\SpecialtyController::class, 'destroy']);//actualizar especialdiades
+
+//Rutas Medicos
+Route::resource('medicos','App\Http\Controllers\DoctorController');
+
+//Rutas Pacientes
+Route::resource('pacientes','App\Http\Controllers\PatientController');
