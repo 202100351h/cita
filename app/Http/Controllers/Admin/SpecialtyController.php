@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use App\Models\Specialty;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class SpecialtyController extends Controller
 {
@@ -76,9 +77,7 @@ class SpecialtyController extends Controller
     public function destroy(Specialty $specialty) {
         
         $deleteName = $specialty->name;
-
         $specialty->delete();
-        
         $notification = 'La especialidad '.$deleteName.' se ha eliminado correctamente';
         
         return redirect('/especialidades')->with(compact('notification'));

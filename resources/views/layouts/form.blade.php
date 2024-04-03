@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>
-    {{ config('app.name') }} - @yield('title')
+    {{config('app.name')}} - @yield('title')
   </title>
   <!-- Favicon -->
   <link href="{{asset('img/brand/favicon.png')}}"  rel="icon" type="image/png">
@@ -23,7 +23,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-top navbar-horizontal navbar-expand-md navbar-dark">
       <div class="container px-4">
-        <a class="navbar-brand" href="{{ url('/') }}">
+        <a class="navbar-brand" href="{{url('/')}}">
           <img src="{{asset('img/brand/white.png')}}" />
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-main" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,7 +34,7 @@
           <div class="navbar-collapse-header d-md-none">
             <div class="row">
               <div class="col-6 collapse-brand">
-                <a href="{{ url('/') }}">
+                <a href="{{url('/')}}">
                   <img src="{{asset('img/brand/blue.png')}}">
                 </a>
               </div>
@@ -49,12 +49,12 @@
           <!-- Navbar items -->
           <ul class="navbar-nav ml-auto">
             
-            <li class="nav-item">
+            {{-- <li class="nav-item">
               <a class="nav-link nav-link-icon" href="{{route('register')}}">
                 <i class="ni ni-circle-08"></i>
                 <span class="nav-link-inner--text">Registrate</span>
               </a>
-            </li>
+            </li> --}}
             <li class="nav-item">
               <a class="nav-link nav-link-icon" href="{{route('login')}}">
                 <i class="ni ni-key-25"></i>
@@ -73,8 +73,8 @@
           <div class="row justify-content-center">
             <div class="col-lg-5 col-md-6">
               
-              <h1 class="text-white">@yield('title', 'Bienvenido')</h1>
-              
+              <h1 class="text-white">@yield('title','Bienvenido')</h1>
+             
             </div>
           </div>
         </div>
@@ -93,15 +93,16 @@
         <div class="row align-items-center justify-content-xl-between">
           <div class="col-xl-6">
             <div class="copyright text-center text-xl-left text-muted">
-              © 2024 <a href="/" class="font-weight-bold ml-1" >{{ config('app.name') }}</a>
+              © 2024 <a href="/" class="font-weight-bold ml-1" >{{config('app.name')}}</a>
             </div>
           </div>
           <div class="col-xl-6">
             <ul class="nav nav-footer justify-content-center justify-content-xl-end">
-              
+             
               <li class="nav-item">
-                <a href="#" class="nav-link" >¿Quiénes somos?</a>
+                <a href="#" class="nav-link" >¿Quienes somos?</a>
               </li>
+              
               
             </ul>
           </div>

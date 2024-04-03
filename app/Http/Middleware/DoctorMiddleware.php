@@ -20,5 +20,5 @@ class DoctorMiddleware
             return $next($request);
 
             return redirect('/');
-    }   
+    }  
 }
